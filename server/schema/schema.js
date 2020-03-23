@@ -2,48 +2,14 @@
 // 2- define relatinship between types
 // 3- define root queries
 const graphql = require('graphql');
+// const _ = require('lodash');
 const schemaTypes = require('./types');
-const _ = require('lodash');
+const helper = require('./functions');
+const db = require('../db');
 
 const { GraphQLObjectType, GraphQLID, GraphQLSchema} = graphql;
-
-// fake data
-const getRandomInt = (min, max) => {
-    min = Math.ceil(min);
-    max = max ? Math.floor(max) : 0;
-    return max ? (Math.floor(Math.random() * (max - min)) + min) : (Math.floor(Math.random() * Math.floor(max)));
-}
-const fakeAuthors = (numberOfAuthors) => {
-    const authors = [];
-
-    for(let i = 0; i < numberOfAuthors; i++){
-        authors.push({
-            id: i.toString(),
-            name: `Author ${i}`,
-            age: getRandomInt(20, 90)
-        })
-    }
-
-    return authors;
-}
-const genres = ['Fantasy', 'Sci-Fi', 'Drama']
-const fakeBooks = (numberOfBooks) => {
-    const books = [];
-
-    for(let i = 0; i < numberOfBooks; i++){
-        books.push({
-            id: i.toString(),
-            name: `Book ${i}`,
-            genre: genres[getRandomInt(3)]
-        })
-    }
-
-    return books;
-}
-
-const books = fakeBooks(5);
-const authors = fakeAuthors(10);
-
+const { resolveCollection } = helper;
+const { Books, Authors } = db;
 const { AuthorType, BookType } = schemaTypes;
 
 const RootQuery = new GraphQLObjectType({
@@ -54,7 +20,7 @@ const RootQuery = new GraphQLObjectType({
             args: { id: { type: GraphQLID } },
             resolve(parent, args){
                 const { id } = args;
-                return _.find(authors, { id });
+                return resolveCollection(parseInt(id), Authors);
             }
         },
         book: {
@@ -64,7 +30,7 @@ const RootQuery = new GraphQLObjectType({
             resolve(parent, args){
                 // get data from DB / 3rd party
                 const { id } = args;
-                return _.find(books, {id});
+                return resolveCollection(parseInt(id), Books);
             }
         }
     }
