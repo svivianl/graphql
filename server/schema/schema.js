@@ -7,7 +7,7 @@ const schemaTypes = require('./types');
 const helper = require('./functions');
 const db = require('../db');
 
-const { GraphQLObjectType, GraphQLID, GraphQLSchema} = graphql;
+const { GraphQLObjectType, GraphQLID, GraphQLSchema, GraphQLList} = graphql;
 const { resolveCollection } = helper;
 const { Books, Authors } = db;
 const { AuthorType, BookType } = schemaTypes;
@@ -31,6 +31,18 @@ const RootQuery = new GraphQLObjectType({
                 // get data from DB / 3rd party
                 const { id } = args;
                 return resolveCollection(parseInt(id), Books);
+            }
+        },
+        books: {
+            type: new GraphQLList(BookType),
+            resolve(parent, args){
+                return Books;
+            }
+        },
+        authors: {
+            type: new GraphQLList(AuthorType),
+            resolve(parent, args){
+                return Authors;
             }
         }
     }
