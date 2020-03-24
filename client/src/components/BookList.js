@@ -12,8 +12,8 @@ const getBooksQuery = gql`
 }
 `
 
-const BookList = () => {
-    console.log("BookList -> retorno", getBooksQuery)
+const BookList = (props) => {
+    console.log("BookList -> retorno", props)
 
     return(
         <div>
