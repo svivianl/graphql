@@ -5,7 +5,14 @@ const graphql = require('graphql');
 const schemaTypes = require('./types');
 const db = require('../db');
 
-const { GraphQLObjectType, GraphQLID, GraphQLSchema, GraphQLList, GraphQLString} = graphql;
+const { 
+    GraphQLObjectType, 
+    GraphQLID, 
+    GraphQLSchema, 
+    GraphQLList, 
+    GraphQLString,
+    GraphQLNonNull
+} = graphql;
 const { Book, Author } = db;
 const { AuthorType, BookType, DateType } = schemaTypes;
 
@@ -51,12 +58,11 @@ const Mutation = new GraphQLObjectType({
         addAuthor:{
             type: AuthorType,
             args: {
-                name: { type: GraphQLString},
-                dateOfBirth: {type: DateType}
+                name: { type: new GraphQLNonNull(GraphQLString)},
+                dateOfBirth: {type: new GraphQLNonNull(DateType)}
             },
             resolve(parent, args){
                 const {name, dateOfBirth} = args;
-                console.log("resolve -> dateOfBirth: ", dateOfBirth)
                 let author = new Author({
                     name,
                     dateOfBirth
@@ -67,9 +73,9 @@ const Mutation = new GraphQLObjectType({
         addBook:{
             type: BookType,
             args: {
-                name: { type: GraphQLString},
-                genre: { type: GraphQLString},
-                authorId: {type: GraphQLString}
+                name: { type: new GraphQLNonNull(GraphQLString)},
+                genre: { type: new GraphQLNonNull(GraphQLString)},
+                authorId: {type: new GraphQLNonNull(GraphQLString)}
             },
             resolve(parent, args){
                 const {name, genre, authorId} = args;
