@@ -11,7 +11,6 @@ const BookDetails = ({showIf, data}) => {
     }
 
     const { book, loading } = data;
-    console.log("BookDetails -> book", book)
 
     return (
         <div id='book-details'>

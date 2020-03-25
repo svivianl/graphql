@@ -10,7 +10,6 @@ const BookDetailsView = ({showIf, book}) => {
 
     return (
         <Fragment>
-            <h2>{ name }</h2>
             <p>{ genre }</p>
             <p>{ author.name }</p>
             <p>All books by this author:</p>

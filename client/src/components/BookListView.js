@@ -13,7 +13,7 @@ const BookListView = ({ books }) => {
         <ul id='book-list'>
             {books.map(book => 
                 <Fragment key={book.id}>
-                    <Book book={book} setBookSelected={setBookSelected}/>
+                    <Book book={book} bookSelected={bookSelected} setBookSelected={setBookSelected}/>
                     <BookDetails showIf={bookSelected == book.id} bookId={book.id}/>
                 </Fragment>)}
         </ul>

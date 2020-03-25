@@ -34,24 +34,21 @@ const AddBookForm = ({ authorsQuery, addBookMutation }) => {
             <form id="add-book" onSubmit={handleSubmit}>
 
                 <div className='field'>
-                    <label>Book name:
-                        <input type='text' onChange={e => setFormValues({...formValues, name: e.target.value})}/>
-                    </label>
+                    <label>Book name:</label>
+                    <input type='text' onChange={e => setFormValues({...formValues, name: e.target.value})}/>
                 </div>
 
                 <div className='field'>
-                    <label>Genre:
-                        <input type='text' onChange={e => setFormValues({...formValues, genre: e.target.value})}/>
-                    </label>
+                    <label>Genre:</label>
+                    <input type='text' onChange={e => setFormValues({...formValues, genre: e.target.value})}/>
                 </div>
 
                 <div className='field'>
-                    <label>Author:
-                        <select onChange={e => setFormValues({...formValues, authorId: e.target.value})}>
-                            <option>Select author</option>
-                            <AuthorOptions showIf={!loading} authors={authors}/>
-                        </select>
-                    </label>
+                    <label>Author:</label>
+                    <select onChange={e => setFormValues({...formValues, authorId: e.target.value})}>
+                        <option>Select author</option>
+                        <AuthorOptions showIf={!loading} authors={authors}/>
+                    </select>
                 </div>
 
                 <button type='submit'>+</button>
