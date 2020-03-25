@@ -1,7 +1,9 @@
-import React from 'react';
+import React, {Fragment, useState} from 'react';
 import Book from './Book';
+import BookDetails from './BookDetails';
 
 const BookListView = ({ books }) => {
+    const [bookSelected, setBookSelected] = useState(null);
     
     if(!books){
         return null;
@@ -9,7 +11,11 @@ const BookListView = ({ books }) => {
 
     return(
         <ul id='book-list'>
-            {books.map(book => <Book key={book.id} book={book}/>)}
+            {books.map(book => 
+                <Fragment key={book.id}>
+                    <Book book={book} setBookSelected={setBookSelected}/>
+                    <BookDetails showIf={bookSelected == book.id} bookId={book.id}/>
+                </Fragment>)}
         </ul>
     )
 }

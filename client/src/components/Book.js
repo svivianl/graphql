@@ -1,14 +1,15 @@
 import React from 'react';
 
-const Book = ({ book }) => {
+const Book = ({ book, setBookSelected }) => {
     if(!book){
         return null;
     }
 
-    const { name, genre } = book;
+    const { name, id } = book;
+    const handleClick = (e) => setBookSelected(id);
 
     return(
-        <li>{name}</li>
+        <li onClick={handleClick}>{name}</li>
     )
 }
 
