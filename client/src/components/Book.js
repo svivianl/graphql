@@ -1,9 +1,14 @@
 import React from 'react';
 
-const Book = () => {
+const Book = ({ book }) => {
+    if(!book){
+        return null;
+    }
+
+    const { name, genre } = book;
 
     return(
-        <li>BookName</li>
+        <li>{name}</li>
     )
 }
 

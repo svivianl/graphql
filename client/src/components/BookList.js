@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { gql } from 'apollo-boost';
 import { graphql } from 'react-apollo';
-import Book from './Book';
+import BookListView from './BookListView';
+import Loader from './loader/Loader';
 
 const getBooksQuery = gql`
 {
@@ -12,15 +13,14 @@ const getBooksQuery = gql`
 }
 `
 
-const BookList = (props) => {
-    console.log("BookList -> retorno", props)
+const BookList = ({ data }) => {
+    const { books, loading } = data;
 
     return(
-        <div>
-            <ul id='book-list'>
-                <Book/>
-            </ul>
-        </div>
+        <Fragment>
+            <BookListView books={books}/>
+            <Loader showIf={loading}/>
+        </Fragment>
     )
 }
 
