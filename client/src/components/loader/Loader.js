@@ -5,9 +5,9 @@ const Loader = ({ showIf }) => {
     if(!showIf){
         return null;
     }
-    
+
     return(
-        <div class="loader"></div> 
+        <div className="loader"></div> 
     )
 }
 
