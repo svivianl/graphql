@@ -1,6 +1,6 @@
 import React, {Fragment, useState} from 'react';
-import Book from './Book';
-import BookDetails from './BookDetails';
+import Book from './components/Book';
+import BookDetails from './components/BookDetails';
 
 const BookListView = ({ books }) => {
     const [bookSelected, setBookSelected] = useState(null);

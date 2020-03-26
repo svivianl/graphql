@@ -1,8 +1,8 @@
 import React from 'react';
 import ApolloClient from "apollo-boost";
 import { ApolloProvider} from 'react-apollo';
-import AddBookForm from './components/AddBookForm';
-import BookList from './components/BookList';
+import AddBookForm from './components/addBookForm/AddBookForm';
+import BookList from './components/bookList/BookList';
 
 const client = new ApolloClient({
   uri: 'http://localhost:8080/graphql'

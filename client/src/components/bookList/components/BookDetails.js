@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { graphql } from 'react-apollo';
-import Loader from './loader/Loader';
-import { getBookQuery } from '../queries';
+import Loader from '../../loader/Loader';
+import { getBookQuery } from '../../../queries';
 import BookDetailsView from './BookDetailsView';
 
 const BookDetails = ({showIf, data}) => {

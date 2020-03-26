@@ -1,9 +1,9 @@
 import React, { Fragment, useState } from 'react';
 import { graphql } from 'react-apollo';
 import {flowRight as compose} from 'lodash';
-import Loader from './loader/Loader';
-import AuthorOptions from './AuthorOptions';
-import { getAuthorsQuery, addBookMutation, getBooksQuery } from '../queries';
+import Loader from '../loader/Loader';
+import AuthorOptions from './components/AuthorOptions';
+import { getAuthorsQuery, addBookMutation, getBooksQuery } from '../../queries';
 
 const initialValues = {
     name: '',

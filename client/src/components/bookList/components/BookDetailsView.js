@@ -6,7 +6,7 @@ const BookDetailsView = ({showIf, book}) => {
         return null;
     }
 
-    const { name, genre, author } = book;
+    const { genre, author } = book;
 
     return (
         <Fragment>

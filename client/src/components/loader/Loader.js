@@ -7,7 +7,9 @@ const Loader = ({ showIf }) => {
     }
 
     return(
-        <div className="loader"></div> 
+        <div className="loader">
+            <div className="circular-progress"></div> 
+        </div> 
     )
 }
 
