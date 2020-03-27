@@ -27,7 +27,6 @@ app.use(
   })
 );
 
-app.use(express.static("PUBLIC"));
-// app.use(express.static("../client/build"));
+app.use(express.static("../client/build"));
 
 app.listen(process.env.PORT, () => console.log("server up"));
