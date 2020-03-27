@@ -6,9 +6,9 @@
 
 A list of books where you can add more books and check the book's details.
 
-![List of books image](./images/books-list.PNG)
+![List of books image](./images/books-list.png)
 
-![List of books with the book's details](./images/books-list-with-book-details.PNG)
+![List of books with the book's details](./images/books-list-with-book-details.png)
 
 ### Stack
 
@@ -25,7 +25,7 @@ A list of books where you can add more books and check the book's details.
 - flexibility querying data
 
 - GraphiQL requesting to get author's data
-  ![GraphiQL requesting to get author's data](./images/graphiQL.PNG)
+  ![GraphiQL requesting to get author's data](./images/graphiQL.png)
 
 - GraphiQL requesting to get nested data
-  ![GraphiQL requesting to get nested data](./images/nestedData.PNG)
+  ![GraphiQL requesting to get nested data](./images/nestedData.png)
