@@ -1,25 +1,23 @@
 form {
   background: #fff;
-  padding: 20px;
-  width: 400px;
+  padding: 1em;
 }
 
 form .field {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 form label {
-  text-align: right;
-  padding: 6px;
+  padding: 0.5em;
 }
 
 form select,
 form input {
-  margin: 4px;
-  padding: 6px;
+  margin: 0.5em;
+  padding: 0.5em;
   box-sizing: border-box;
+  width: 100%;
 }
 
 form button {
@@ -30,4 +28,25 @@ form button {
   padding: 0 10px;
   border-radius: 50%;
   cursor: pointer;
+  margin-top: 0.5em;
+}
+
+@media screen and (min-width: 600px) {
+  form {
+    width: 25em;
+  }
+
+  form .field {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+  }
+
+  form label {
+    text-align: right;
+  }
+
+  form button {
+    margin-top: 0;
+  }
 }
