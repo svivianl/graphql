@@ -1,0 +1,21 @@
+.book-list-button {
+  margin: 0.5rem;
+  padding: 1.5rem;
+  list-style-type: none;
+  border-radius: 4px;
+  border: 1px solid #29091a;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  color: #880e4f;
+}
+
+.book-list-button.selected {
+  margin: 0.5rem 0.5rem 0 0.5rem;
+  font-size: larger;
+  font-weight: 700;
+  box-shadow: none;
+  border-bottom: none;
+  color: #fff;
+  background-color: #880e4f;
+  border-radius: 4px 4px 0 0;
+}

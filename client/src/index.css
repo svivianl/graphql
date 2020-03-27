@@ -1,89 +1,19 @@
 body {
   margin: 0;
   background: #eee;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#main h1{
+#main h1 {
   color: #444;
   text-align: center;
 }
 
-#main{
+#main {
   padding: 0;
   box-sizing: border-box;
   height: 100%;
-}
-
-#book-list{
-  padding:0
-}
-
-.book-list-button{
-  margin: 0.5rem;
-  padding: 1.5rem;
-  list-style-type: none;
-  border-radius: 4px;
-  border: 1px solid #29091a;
-  box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
-  cursor: pointer;
-  color: #880E4F;
-}
-
-.book-list-button.selected{
-  margin: 0.5rem 0.5rem 0 0.5rem;
-  font-size: larger;
-  font-weight: 700;
-  box-shadow: none;
-  border-bottom: none;
-  color: #fff;
-  background-color: #880E4F;
-  border-radius: 4px 4px 0 0;
-}
-
-#book-details{
-  margin: 0 0.5rem 0.5rem 0.5rem;
-  padding: 0 1.5rem 1.5rem 1.5rem;
-  border-radius: 0 0 4px 4px;
-  border: 1px solid #880e4f;
-  box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
-  cursor: pointer;
-  color: #fff;
-  background-color: #880E4F;
-}
-
-form{
-  background: #fff;
-  padding: 20px;
-  width: 400px;
-}
-
-form .field{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 10px;
-}
-
-form label{
-  text-align: right;
-  padding: 6px;
-}
-
-form select, form input{
-  margin: 4px;
-  padding: 6px;
-  box-sizing:border-box;
-}
-
-form button{
-  color: #fff;
-  font-size: 2em;
-  background: #AD1457;
-  border: 0;
-  padding: 0 10px;
-  border-radius: 50%;
-  cursor: pointer;
 }
