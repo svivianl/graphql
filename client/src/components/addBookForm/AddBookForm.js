@@ -61,7 +61,7 @@ const AddBookForm = ({ authorsQuery, addBookMutation }) => {
             }
           >
             <option>Select author</option>
-            <AuthorOptions showIf={!loading} authors={authors} />
+            <AuthorOptions showIf={!loading && authors} authors={authors} />
           </select>
         </div>
 
