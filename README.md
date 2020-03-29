@@ -20,9 +20,15 @@ A list of books where you can add more books and check the book's details.
 
 - move the add books functionality into an Add Books button which will toggle the AddBooksForm component
 
+### Known issues
+
+- needs to convert dateOfBirth
+
 ## Advantages:
 
 - flexibility querying data
+
+## Requests:
 
 - GraphiQL requesting to get author's data
   ![GraphiQL requesting to get author's data](./images/graphiQL.png)
