@@ -4,7 +4,7 @@
 
 ## App
 
-A list of books where you can add more books and check the book's details.
+A list of books where the user can see the book's details and add more books to it.
 
 ![List of books image](./images/books-list.png)
 
