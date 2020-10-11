@@ -14,7 +14,7 @@ A list of books where the user can see the book's details and add more books to 
 
 - Frontend: React, apollo
 - Backend: Node.js, Express.js, MongoDB
-- Tools: Graphiql
+- Tools: GraphiQL
 
 ### Future features
 
@@ -35,3 +35,9 @@ A list of books where the user can see the book's details and add more books to 
 
 - GraphiQL requesting to get nested data
   ![GraphiQL requesting to get nested data](./images/nestedData.png)
+
+## How to run the App
+
+- Server: run `npm start`
+- Client: run `npm start`
+  Development: change `"start": "node server.js",` to `"start": "react-scripts start",`
